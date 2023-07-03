@@ -154,7 +154,7 @@ Notes:
 Browse to your help desk login page: http://localhost/osTicket/scp/login.php  
 End Users osTicket URL: http://localhost/osTicket/ 
 
-### osTicket Post installation Configure Roles
+<h2>osTicket Post installation Configure Roles</h2>
 Configure Roles
 - Admin Panel -> Agents -> Roles
 - Supreme Admin
@@ -196,7 +196,7 @@ Personal Computer Issues
 Equipment Request
 Password Reset
 
-### Practice making, assigning and completing tickets
+<h2>Practice making, assigning and completing tickets</h2>
 Just practice creating, triaging, and solving tickets. I recommend watching the video to learn about triaging multiple tickets.
 Ticket examples:
 - Sev-A (1 hour, 24/7) [entire mobile/online banking system is down] -> SysAdmins
