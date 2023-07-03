@@ -43,8 +43,7 @@ Open this: [Installation Files](https://drive.google.com/drive/u/1/folders/1APMf
 
 We will use these files to install osTicket and some of the dependencies. I’m using this offline version to make sure everyone is using the same version of all the files :)
 
-Install / Enable IIS in Windows WITH
-CGI and Common HTTP Features
+### Install / Enable IIS in Windows WITH CGI and Common HTTP Features
 Navigate to Control Panel -> Programs -> Turn Windows features on or off
 
 
@@ -62,10 +61,13 @@ AND IIS Management Console
 127.0.0.1
 Into the web browser
 
+### Install PHP Manager for IIS
 - From the [Installation Files](https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6), download and install PHP Manager for IIS (PHPManagerForIIS_V1.5.0.msi)
 
+### Install Rewrite Module
 - From the [Installation Files](https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6), download and install the Rewrite Module (rewrite_amd64_en-US.msi)
 
+### Install PHP
 - Create the directory C:\PHP in Windows explorer
 
 - From the [Installation Files](https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6), download PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) and unzip the contents into C:\PHP
@@ -78,6 +80,7 @@ If you are still having trouble downloading PHP 7.3.8, please try downloading an
 
 - From the [Installation Files](https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6), download and install VC_redist.x86.exe.
 
+### Install MySQL
 - From the [Installation Files](https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6), download and install MySQL 5.5.62 (mysql-5.5.62-win32.msi)
 - Typical Setup ->
 - Launch Configuration Wizard (after install) ->
@@ -85,7 +88,8 @@ If you are still having trouble downloading PHP 7.3.8, please try downloading an
 [X] Install as Windows Service
 - Next
 - Enter desired your password x2
- 
+
+ ### Register PHP on IIS
 - Open IIS as an Admin
 Click on windows start button
 Type IIS in search box
@@ -99,6 +103,7 @@ Click php-cgi
 
 - Reload IIS (Open IIS, Stop and Start the server)
 
+### Install osTicket
 - Install osTicket v1.15.8
 Download osTicket from the [Installation Files](https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6) Folder
 Extract and copy “upload” folder to c:\inetpub\wwwroot
@@ -156,7 +161,7 @@ Notes:
 Browse to your help desk login page: http://localhost/osTicket/scp/login.php  
 End Users osTicket URL: http://localhost/osTicket/ 
 
-Part 3 (Post Installation Setup)
+### osTicket Post installation Configure Roles
 Configure Roles
 Admin Panel -> Agents -> Roles
 Supreme Admin
