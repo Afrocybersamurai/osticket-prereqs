@@ -48,6 +48,7 @@ Navigate to Control Panel -> Programs -> Turn Windows features on or off
 AND IIS Management Console
 - Internet Information Services -> Web Management Tools -> IIS Management Console
 	[X] IIS Management Console
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/56b06680-a2ce-4d4f-8379-4b7e7876a5d9)
 
 
 - Test web server is up and running by inputting
@@ -64,10 +65,12 @@ Into the web browser
 - Create the directory C:\PHP in Windows explorer
 
 - From the [Installation Files](https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6), download PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) and unzip the contents into C:\PHP
-!! ATTENTION !!
+- !! ATTENTION !!
 If this appears, choose to “Keep” the file:
 
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/709050b9-1cad-411e-8dd1-7c659b5bc111)
 
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/5c3b1981-1ed1-478c-b77d-6846e97c0ea7)
 
 If you are still having trouble downloading PHP 7.3.8, please try downloading and installing Google Chrome and doing it from within there. 
 
@@ -81,12 +84,14 @@ If you are still having trouble downloading PHP 7.3.8, please try downloading an
 [X] Install as Windows Service
 - Next
 - Enter desired your password x2
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/77002e29-b16b-47d2-a591-a2caf2c17019)
 
  ### Register PHP on IIS
 - Open IIS as an Admin
 Click on windows start button
 Type IIS in search box
 Right click and ‘run as administrator’
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/2a6d065a-2c81-4a08-9586-9f482aee28f0)
 
 - Register PHP from within IIS
 Click on PHP Manager
@@ -95,6 +100,8 @@ Browse to C:\PHP
 Click php-cgi
 
 - Reload IIS (Open IIS, Stop and Start the server)
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/e9ca4e4c-172b-4727-ac6f-261f12ba08aa)
+
 
 ### Install osTicket
 - Install osTicket v1.15.8
