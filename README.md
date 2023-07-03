@@ -198,7 +198,8 @@ Password Reset
 
 <h2>Practice making, assigning and completing tickets</h2>
 Just practice creating, triaging, and solving tickets. I recommend watching the video to learn about triaging multiple tickets.
-Ticket examples:
+
+- Ticket examples:
 - Sev-A (1 hour, 24/7) [entire mobile/online banking system is down] -> SysAdmins
 - Sev-B (4 hours, 24/7) [accounting department needs adobe upgrade, broken]
 - Sev-B/C (2 hours, business hours) [CFO’s laptop seems a bit slow]
