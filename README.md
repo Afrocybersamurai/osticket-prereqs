@@ -31,13 +31,6 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>Installation Steps</h2>
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
 
 Open this: [Installation Files](https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6)
 
@@ -206,7 +199,7 @@ Password Reset
 ### Practice making, assigning and completing tickets
 Just practice creating, triaging, and solving tickets. I recommend watching the video to learn about triaging multiple tickets.
 Ticket examples:
-Sev-A (1 hour, 24/7) [entire mobile/online banking system is down] -> SysAdmins
-Sev-B (4 hours, 24/7) [accounting department needs adobe upgrade, broken]
-Sev-B/C (2 hours, business hours) [CFO’s laptop seems a bit slow]
+- Sev-A (1 hour, 24/7) [entire mobile/online banking system is down] -> SysAdmins
+- Sev-B (4 hours, 24/7) [accounting department needs adobe upgrade, broken]
+- Sev-B/C (2 hours, business hours) [CFO’s laptop seems a bit slow]
 
