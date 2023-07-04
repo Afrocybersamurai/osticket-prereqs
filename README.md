@@ -249,7 +249,8 @@ Let's ensure Full Control and all the other boxes are checked.
 
   Once that is done we will continue to setup osTicket in the browser. Click Continue on the osTicket browser page.
   Fill out the page as required except the Database Settings at the bottom of the page. We will get to that. 
-  
+
+### Install HeidiSQL
   Next, we will download and install HeidiSQL from the Installation Files. 
   
 
@@ -271,7 +272,7 @@ Let's ensure Full Control and all the other boxes are checked.
 
   Once we are connected to the session we will go back to the browser to finish setting everything up. Under the Database Settings in the browser the username will be root and the password will be your password
  
- ### Install HeidiSQL
+
  
   We will now create a new database within HeidiSQL. In Heidi right click on the left side where is says "Unnamed", select "create new", and then select "database". Name the new database osTicket. Once we have the new database setup go back to the osTicket browser and under MySQL Database type in osTicket.
   
