@@ -62,8 +62,8 @@ We will use these files to install osTicket and some of the dependencies. I’m 
 ### Install / Enable IIS in Windows WITH CGI and Common HTTP Features
 Navigate to Control Panel -> Programs -> Turn Windows features on or off
 ![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/a4025bf4-a9ea-4c27-9d0e-b8fdb4d283ea)
-![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/d4040c48-2066-4cfc-8def-e0cd5fed67db)
 
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/d4040c48-2066-4cfc-8def-e0cd5fed67db)
 
 
 
@@ -72,6 +72,7 @@ Navigate to Control Panel -> Programs -> Turn Windows features on or off
 
 
 ![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/a126ed25-906c-4ae8-84a4-cca4c5b74b8a)
+
 - Internet Information Services -> World Wide Web Services -> 
 [X] Common HTTP Features
 ![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/e5a81c8f-175f-43cf-95d2-1a8fafe13647)
@@ -85,7 +86,8 @@ AND IIS Management Console
 - Test web server is up and running by inputting
 127.0.0.1
 Into the web browser
-It should look something like this.
+It should look something like this:
+
 ![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/401fdf89-8575-4bf1-a669-a89bc0499ea7)
 
 
@@ -104,6 +106,7 @@ If this appears, choose to “Keep” the file:
 
 
 ![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/bd903646-790f-4d85-90ab-0862dc0e4b26)
+
 ![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/08fb175d-2e00-4d20-aaa5-7e3beb62cafc)
 
 
@@ -119,6 +122,8 @@ If you are still having trouble downloading PHP 7.3.8, please try downloading an
 [X] Install as Windows Service
 - Next
 - Enter desired your password x2
+
+  
 ![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/c3ae8872-8c40-4f90-9ecd-224393860603)
 
 ![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/292febfc-0e0a-4257-a6f2-d91cca00736b)
@@ -155,55 +160,152 @@ Within c:\inetpub\wwwroot, Rename “upload” to “osTicket”
 
 Reload IIS (Open IIS, Stop and Start the server)
 
-- Go to sites -> Default -> osTicket
-On the right, click “Browse *:80”
+  
+- On IIS go to sites -> Default -> osTicket
+  -On the right, click “Browse *:80”
+  
 
-Note that some extensions are not enabled
-Go back to IIS, sites -> Default -> osTicket
-Double-click PHP Manager
-Click “Enable or disable an extension”
-Enable: php_imap.dll
-Enable: php_intl.dll
-Enable: php_opcache.dll
-Refresh the osTicket site in your browse, observe the changes
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/60318f00-8d5c-4917-b8cc-0e9cfeda5868)
 
-- Rename: ost-config.php
-From: C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php
-To: C:\inetpub\wwwroot\osTicket\include\ost-config.php
 
-- Assign Permissions: ost-config.php
-Disable inheritance -> Remove All
-New Permissions -> Everyone -> All
 
-Continue Setting up osTicket in the browser (click Continue)
-Name Helpdesk
-Default email (receives email from customers)
+  
+  Some extensions are not enabled on the osTicket browser.
+  
 
-- From the Installation Files, download and install HeidiSQL.
-Open Heidi SQL
-Create a new session, root/Password1
-Connect to the session
-Create a database called “osTicket”
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/caaf93df-9bae-40fb-b6da-b6312f33ccd2)
 
-- Continue Setting up osticket in the browser
-MySQL Database: osTicket
-MySQL Username: root
-MySQL Password: [enter password you used earlier]
-Click “Install Now!”
 
-Congratulations, hopefully it is installed with no errors!
-Browse to your help desk login page: http://localhost/osTicket/scp/login.php
+  
+  To enable the extensions:
+  -Go back to IIS, sites -> Default -> osTicket
+  -Double click PHP manager
+  -Click "Enable or disable an extension"
+  
 
-End Users osTicket URL:
-http://localhost/osTicket/ 
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/ddd1b91f-eb93-401a-8fa3-e9809aad8e8f)
+	
 
-- Clean up
-Delete: C:\inetpub\wwwroot\osTicket\setup
-Set Permissions to “Read” only: C:\inetpub\wwwroot\osTicket\include\ost-config.php
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/54b5628d-92fe-4fe9-a9d8-77b81de8305a)
+
+
+  
+  We will enable three extensions from here.
+  
+  1.) php_imap.dll
+ 
+  2.) php_intl.dll
+  
+  3.) php_opcache.dll
+  
+
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/04ac1722-c530-4549-b025-cc929d45d1cd)
+	
+
+  
+  
+Now that we have those extensions enabled in IIS, we are going to rename one of the files in our osTicket folder.
+Go into the file explorer and search for C;\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php
+  
+  We are going to rename the ost-sampleconfig.php to ost-config.php
+  
+  Now that we have renamed the files, right click on the file and go to properties.
+  From there click security, click on advance, and disable the inheritance.
+  We will select Remove all inherited permissions from this object.
+  
+  Now we will add new permissions.
+  
+  Click Add
+  
+
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/cb41b7a9-2b7f-4620-91fd-99d58a3ff72e)
+
+
+Select a principal
+  
+
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/42581cee-dca6-42dd-94b3-c1f9d6d261be)
+
+
+  
+ Type "Everyone" in the box.
+  
+
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/f6b07f06-aa37-442f-b126-1bd917f6145d)
+
+
+Let's ensure Full Control and all the other boxes are checked.
+  
+
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/6817c368-8b94-4ba2-bbd6-2902bb4c1024)
+	
+
+  
+  Click Apply and OK.
+  
+
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/c6d8b03d-68ea-4c56-9931-df6ce61eb02e)
+
+
+  Once that is done we will continue to setup osTicket in the browser. Click Continue on the osTicket browser page.
+  Fill out the page as required except the Database Settings at the bottom of the page. We will get to that. 
+  
+  Next, we will download and install HeidiSQL from the Installation Files. 
+  
+
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/a81b132b-4f9c-4110-8952-71e140c5d2e9)
+	
+
+  
+  When the program is open we will create a new session in it.
+  
+
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/9ff08430-2574-49ef-a877-7d86b397aa7e)
+
+
+  We want to make sure the username is root and the password is the same you used for MySQL setup
+  
+
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/6f30ca4e-fa2e-451c-92fb-ad545a9b7666)
+	
+
+  Once we are connected to the session we will go back to the browser to finish setting everything up. Under the Database Settings in the browser the username will be root and the password will be your password
+ 
+ ### Install HeidiSQL
+ 
+  We will now create a new database within HeidiSQL. In Heidi right click on the left side where is says "Unnamed", select "create new", and then select "database". Name the new database osTicket. Once we have the new database setup go back to the osTicket browser and under MySQL Database type in osTicket.
+  
+
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/c3402760-4282-452e-bd75-efba12786ab6)
+
+
+  The last step is to do some clean up. We will want to delete the setup folder in our system. 
+  -Delete: C:\inetpub\wwwroot\osTicket\setup
+  Only delete the setup folder and nothing else.
+  
+  We then will want to set the permissions back to "Read" only in the ost-config.php file.
+  
+
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/66fddfdc-e8bd-4c83-bb13-d48ae439516c)
+
+
+
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/bfc9d7fe-32dc-424a-aea1-5def26f929e0)
+	
+
+  The last step after that is to login to osTicket on the browser.
+  
+
+![image](https://github.com/Afrocybersamurai/osticket-prereqs/assets/136266716/5220d4a8-4ffd-42f7-b310-db67fb83cb40)
+
+
+  Excellent work! You have successfully setup and installed osTicket!
 
 Notes:
 Browse to your help desk login page: http://localhost/osTicket/scp/login.php  
 End Users osTicket URL: http://localhost/osTicket/ 
+
+---
 
 <h2>osTicket Post installation Configure Roles</h2>
 Configure Roles
