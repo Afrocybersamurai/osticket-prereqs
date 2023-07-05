@@ -31,6 +31,14 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - MySQL
 - Heidi SQL
 - osTicket v1.15.8
+- (Installation links below)
+
+
+<details close>
+
+<div>
+
+</summary>
 
 <h2>Create Azure virtual machine (recommended)</h2>
 
