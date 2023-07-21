@@ -33,8 +33,8 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - osTicket v1.15.8
 - (Installation links below)
 
-
-<details close>
+Click below:
+<Details close>
 
 <div>
 
